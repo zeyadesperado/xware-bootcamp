@@ -1,0 +1,246 @@
+    1  history 
+    2  history --h
+    3  history --help
+    4  ls --help
+    5  ls -h
+    6  ls
+    7  ls -a 
+    8  ls -l
+    9  ls -l -h
+   10  alias ls -a = la 
+   11  alias ls -a = x 
+   12  alias full-list = "ls -a"
+   13  alais full-list = "ls -a"
+   14  alias full-list ="ls -a"
+   15* 
+   16  alias full-list= "ls -a"
+   17  alias full-list="ls -a"
+   18  full-list 
+   19  ls-a 
+   20  ls -a 
+   21  env
+   22  env >> test.c
+   23  grep "user" test.c 
+   24  rm test.c 
+   25  env | grep "user"
+   26  env | grep "User"
+   27  env | grep "USER"
+   28  echo " Hello world" test.bash
+   29  shutdown --help
+   30  time
+   31* time --help 
+   32  shutdown -c
+   33  code.
+   34  code .
+   35  rm /home/z/desktop
+   36  rm --h
+   37  rm -r /help/z/desktop
+   38  rm -r /home/z/desktop
+   39  get commit --h
+   40  git commit --h
+   41  git commit --help
+   42  sudo apt install git
+   43  git commit --help
+   44  sudo apt install git all
+   45  /home ls
+   46  /home
+   47  cd /home 
+   48  ls
+   49  mkdir git
+   50  cd
+   51  mkdir git 
+   52  cd git
+   53  git init
+   54  sudo
+   55  ls -a
+   56  touch test.html
+   57  code .
+   58  git add.
+   59  git add .
+   60  ls
+   61  git log
+   62  git commit -m "Version 1"
+   63  git config
+   64  git config --global
+   65  git config --global user.name "Zeyad Hashem"
+   66  git config --global user.email "Zeyadhashem188@gmail.com"
+   67  git commit -m "Version 1"
+   68  git log 
+   69  git add .
+   70  git commit -m "Version 2"
+   71  git commit
+   72  git log
+   73  git log 
+   74  git status
+   75  git diff
+   76  git diff --help
+   77  git checkout -b
+   78  git checkout mian
+   79  git checkout main
+   80  git checkout -b rename-bransh main
+   81  git checkout -b rename-bransh master
+   82  git merge --h
+   83  git merge rename-bransh
+   84  git chechout main
+   85  git chechout master
+   86  git checkhout master
+   87  git checkout master
+   88  git merge rename-bransh
+   89  \
+   90  git clone https://github.com/zeyadesperado/xware-bootcamp.git
+   91  ls
+   92  git clone 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
+   93  git clone https://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@github.com/zeyadesperado/xware-bootcamp.git
+   94  git clone https://github.com/zeyadesperado/IS-project.git
+   95  ls
+   96  cd xware-bootcamp/
+   97  mkdir week1
+   98  cd week1/
+   99  touch README.md
+  100  echo "Hello World From My New Shiny Repository xware-bootcamp" > README.md 
+  101  cat README.md 
+  102  get add .
+  103  git add .
+  104  git commit -m -"exersice 2"
+  105  git status
+  106  git push
+  107  ls
+  108  cd ..
+  109  rm xware-bootcamp/
+  110* 
+  111  cd xware-bootcamp/
+  112  ls
+  113  cd ..
+  114  git clone https://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@github.com/zeyadesperado/xware-bootcamp
+  115  ls
+  116  cd xware-bootcamp/
+  117  mkdir week1
+  118  cd week1/
+  119  touch README.md
+  120  echo "# Hello World From My New Shiny Repository xware-bootcamp" > README.md 
+  121  git add .
+  122  git commit -m "2nd exersise"
+  123  git push
+  124  git status
+  125  cd ~/.ssh
+  126  ssh-keygen -o -t rsa -C "bsbsman11@gmail.com"
+  127  cat id_rsa.pub
+  128  git status
+  129  git clone https://github.com/zeyadesperado/xware-bootcamp.git
+  130  ls
+  131  cd xware-bootcamp/
+  132  mkdir week1
+  133  ls
+  134  cd week1/
+  135  ls
+  136  cat re
+  137  cat README.md 
+  138  zy elfol 
+  139  clear
+  140  cd .. 
+  141  cd ..
+  142  get init
+  143  git init
+  144  rm -r .get
+  145  rm -r .git
+  146  ls
+  147  cd xware-bootcamp/
+  148  git clone
+  149  git clone --local
+  150  git clone -l xware-bootchamp
+  151  git clone -l
+  152  cd ..
+  153  git clone -l xware-bootcamp/
+  154  clear
+  155  get init
+  156  clear
+  157  git init 
+  158  rm -r .git
+  159  git clone https://github.com/zeyadesperado/xware-bootcamp
+  160  cd xware-bootcamp/
+  161  git status
+  162  git checkout -b feature-add-new-week master
+  163  git branch
+  164  mkdir week2
+  165  cd week2
+  166  touch README.md
+  167  echo "# Hello From Week 2" > README.md 
+  168  git add .
+  169  git -commit -m "week2"
+  170  git commit -m "week2"
+  171  git status
+  172  git merge feature-add-new-week
+  173  git branch
+  174  git mergre master
+  175  git merge master
+  176  git merge "feature-add-new-week"
+  177  git branch
+  178  git switch
+  179  git checkout -b master
+  180  git checkout master
+  181  git branch
+  182  ls
+  183  git branch
+  184  git status
+  185  git log
+  186  c ..
+  187  ls -a
+  188  cd ..
+  189  ls
+  190  cd
+  191  git clone https://github.com/zeyadesperado/xware-bootcamp
+  192  ls
+  193  cd xware-bootcamp/
+  194  ls
+  195  mkdir week2
+  196  cd week2
+  197  touch README.md
+  198  echo "# Hello From Week 2" > 
+  199  echo "# Hello From Week 2" > README.md 
+  200  git add .
+  201  git commit -m "week2" 
+  202  git status 
+  203  cd ..
+  204  rm -r week2
+  205  git checkout -b feature-add-new-week master
+  206  git bransh
+  207  git branch
+  208  ls
+  209  mkdir week2
+  210  cd week2
+  211  touch README.md
+  212  echo"# Hello From Week 2" > README.md 
+  213  echo "# Hello From Week 2" > README.md 
+  214  git add .
+  215  git commit -m "week2"
+  216  ls
+  217  git branch
+  218  git log
+  219  git checkout master
+  220  git merge feature-add-new-week 
+  221  git branch
+  222  git merge feature-add-new-week 
+  223  git log
+  224  git branch
+  225  git switch feature-add-new-week 
+  226  git log
+  227  ls
+  228  echo "hello from week 222"
+  229  echo "hello from week 222" > README.md 
+  230  git status
+  231  git commit -am "upate file "
+  232  git log 
+  233  git switch master
+  234  git log
+  235  git merge feature-add-new-week 
+  236  git branch -d feature-add-new-week 
+  237  git push
+  238  cd ..
+  239  cd week1
+  240  touch day2
+  241  history
+  242  clear
+  243  ls
+  244  rm day2 
+  245  touch day2.txt
+  246  history > day2.txt
