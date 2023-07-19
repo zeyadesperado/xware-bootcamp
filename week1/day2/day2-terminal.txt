@@ -1,0 +1,14 @@
+Q1 - Use the cat command to display the contents of a file named "data.txt" and pipe the output to the grep command to search for the word "hello".
+>> cat data.txt | grep "hello
+Q2 - Use the sort command to alphabetically order the lines of a file named "words.txt" and redirect the sorted output to a new file named "sorted_words.txt".
+>> sort word.txt > sorted_words.txt
+Q3 - Use the uniq command to filter out duplicate lines from a file named "numbers.txt" and redirect the unique lines to a new file named "unique_numbers.txt".
+>> uniq numbers.txt > unique_numbers.txt
+Q4 - Create an alias named "xware" that executes the command ls -l every time it is invoked.
+>> alias xware = "ls -l"
+Q5 - display the list of environmental variables in the terminal.
+>> env
+Q6 - list the previously executed commands.
+>> history
+Q7 - display the network interfaces and their configurations.
+>> ip addr
