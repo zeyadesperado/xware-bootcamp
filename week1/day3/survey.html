@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camp survey form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style> 
+</head>
+<body>
+    <h1>xWare camp survey</h1>
+    <form action="#">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div>
+    </br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    </div>
+    <div>
+    </br>    <label for="gender">Gender:</label>
+        <select name="gender" id="gender" form="select_gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Prefer not to say</option>
+        </select>
+    </div>
+    
+    <div>
+    </br>
+        <label for="Experience">what's your experiences</label>
+        <input type="text" id="Experience" name="Experience">
+    </div>
+    <div>
+    </br>
+        <label for="tech">What did you apply for?</label>
+            <input type="radio" id="back" name="tech">
+            <label style="display: inline;" for="back">Back-End developer</label>
+        </div>
+            <input type="radio" id="front" name="tech">
+            <label style="display: inline;" for="front">front-End developer</label>
+    </br>
+        </div>
+       
+    </br>
+        <label for="hobbies">what's your hobbies</label>
+        <textarea id="hobbies" name="hobbies" required></textarea>
+
+        <label for="future_goals">How do you see yourself in 5 years ?</label>
+        <textarea id="future_goals" name="future_goals" required></textarea>
+
+        <!-- How did they know about the camp -->
+        <label style="display: inline;" for="campACK">How did you know about the camp?</label>
+        <div>
+            <input type="checkbox" id="ACK1" name="campACK" value="ACK1" required>
+            <label style="display: inline;" for="ACK1">Facebook</label>
+        </div>
+            <input type="checkbox" id="ACK2" name="campACK" value="ACK2" required>
+            <label style="display: inline;" for="ACK2">LinkedIn</label>
+        <div>
+            <input type="checkbox" id="ACK3" name="campACK" value="ACK3" required>
+            <label style="display: inline;" for="checkbox">a Friend</label>
+        </div>
+        <div>
+            <input type="checkbox" id="ACK4" name="campACK" value="ACK4" required>
+            <label style="display: inline;" for="ACK4">other</label>
+        </div>
+
+        <div>
+        </br>
+            <label for="comments">What do you think of the camp so far:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+      <footer>
+        &copy; Zeyad Mohamed Hashem. All rights reserved.
+      </footer>
+</body>
+</html>
