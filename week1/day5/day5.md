@@ -1,7 +1,12 @@
 # day5
 #### mongodb is a not a relational database
+<<<<<<< HEAD
 -  True
 -  False
+=======
+- True
+- False
+>>>>>>> 1f4b3646534f92aeb6573471779e58f1ebb6c4b0
 > answer : true
  
 #### When you use MongoDB is data that is accessed together should be stored together
@@ -82,9 +87,18 @@
 - B) Non- clustered index
 - C) Full- text index
 - D) Composite index
+<<<<<<< HEAD
 > answer : A
 #### primary key is physically implemented as ...
 - a -  variable
 - b -  clustered index
 - c -  non -  clustered index
 > answer : A
+=======
+> answer : A
+#### primary key is physically implemented as ...
+- a -  variable
+- b -  clustered index
+- c -  non -  clustered index
+> answer : B
+>>>>>>> 1f4b3646534f92aeb6573471779e58f1ebb6c4b0
