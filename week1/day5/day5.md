@@ -1,7 +1,7 @@
 # day5
 #### mongodb is a not a relational database
--True
--False
+- True
+- False
 > answer : true
  
 #### When you use MongoDB is data that is accessed together should be stored together
