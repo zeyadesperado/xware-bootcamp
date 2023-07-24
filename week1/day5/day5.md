@@ -87,4 +87,4 @@
 - a -  variable
 - b -  clustered index
 - c -  non -  clustered index
-> answer : A
+> answer : B
