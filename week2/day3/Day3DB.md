@@ -1,5 +1,5 @@
             
-                       # **DAY3**
+                       # DAY3
 
 > 1- Select Subject id, Subject Name, Subject Code, Course Duration in One Query
 
