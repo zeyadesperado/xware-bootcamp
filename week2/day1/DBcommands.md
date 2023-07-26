@@ -1,12 +1,19 @@
- CREATE TABLE faculty(
+# Day1
+
+## Exercise 1 - (ER diagram)
+
+```sql
+CREATE TABLE faculty(
     F_id INT PRIMARY KEY,
     F_name varchar(30) 
  );
+
  CREATE TABLE department(
     D_id int PRIMARY key,
     D_name varchar(30),
     F_id int
  );
+
  CREATE TABLE address(
     A_id int PRIMARY key,
     governorate varchar(40),
@@ -14,6 +21,7 @@
     line_1 text not null,
     line_2 text null
  );
+
  CREATE TABLE Student_Address(
     Stu_A_id int PRIMARY key,
     A_id int,
@@ -62,3 +70,4 @@
     Time time,
     Duration varchar(20)
  );
+```
