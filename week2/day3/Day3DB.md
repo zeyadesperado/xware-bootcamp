@@ -1,6 +1,7 @@
             
 # DAY3
 
+### Database task
 > 1- Select Subject id, Subject Name, Subject Code, Course Duration in One Query
 
 ```sql
