@@ -105,3 +105,34 @@ select firstname,surname,joindate from cd.members where
 joindate = 
 (select max(joindate) from cd.members);
 ```
+
+## join and subqueries Exercises
+
+> Exercise 1
+
+#### Retrieve the start times of members' bookings 
+
+```sql
+select cd.bookings.starttime 
+from cd.bookings 
+inner join cd.members on
+cd.bookings.memid = cd.members.memid
+where members.firstname = 'David'
+and members.surname = 'Farrell';
+```
+
+> Exercise 2 
+
+#### Work out the start times of bookings for tennis courts
+
+```sql
+select cd.bookings.starttime as start, cd.facilities.name as name 
+from cd.facilities 
+inner join cd.bookings
+on cd.bookings.facid = cd.facilities.facid
+where 
+cd.facilities.name like '%Tennis Court%' and 
+cd.bookings.starttime >= '2012-09-21'
+and cd.bookings.starttime < '2012-09-22'
+order by cd.bookings.starttime;
+```
