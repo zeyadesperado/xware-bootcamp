@@ -26,3 +26,24 @@ print(f"{x} + {y} = {x+y}")
 print(f"{x} * {y} = {x*y}")
 print(f"{x} - {y} = {x-y}")
 ```
+> <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K">K. Max and Min </a>
+
+```python
+x, y, z = map(int,input().split())
+if x >= y and x >= z:
+    if y <= z:
+        print(f"{y} {x}")
+    else:
+        print(f"{z} {x}")
+elif y >= z and y >= x:
+    if z <= x:
+        print(f"{z} {y}")
+    else:
+        print(f"{x} {y}")
+else:
+    if x <= y:
+        print(f"{x} {z}")
+    else:
+        print(f"{y} {z}")
+
+```
