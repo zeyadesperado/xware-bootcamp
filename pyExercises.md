@@ -17,7 +17,7 @@ else:
     print("\n Nice! You got it right the right number is " + str(num_guessed) + " !")
 ```
 
-> #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C">Simple Calculator</a>
+- #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C">C. Simple Calculator</a>
 ```python
 x,y = input().split()
 x = int(x)
@@ -26,7 +26,7 @@ print(f"{x} + {y} = {x+y}")
 print(f"{x} * {y} = {x*y}")
 print(f"{x} - {y} = {x-y}")
 ```
-> #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K">K. Max and Min </a>
+- #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K">K. Max and Min </a>
 
 ```python
 x, y, z = map(int,input().split())
@@ -48,9 +48,20 @@ else:
 
 ```
 
-> #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/F">F. Digits Summation</a>
+- #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/F">F. Digits Summation</a>
 
 ```python
 x,y = input().split()
 print(f"{int(x[-1])+int(y[-1])}")
+```
+- #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Q">Q. Digits </a>
+
+```python
+n = int(input())
+for _ in range (n):
+    num = int(input())
+    num_str = str(num)
+    num_array = [int(num_array) for num_array in num_str]
+    reverse = reversed(num_array)
+    print(*reverse)
 ```
