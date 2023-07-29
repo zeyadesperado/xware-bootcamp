@@ -18,7 +18,6 @@ else:
 ```
 
 > <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C">Simple Calculator</a>
-![Alt text](image.png)
 ```python
 x,y = input().split()
 x = int(x)
