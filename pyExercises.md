@@ -65,3 +65,43 @@ for _ in range (n):
     reverse = reversed(num_array)
     print(*reverse)
 ```
+
+- #### <a href = "https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S">S. Sum of Consecutive Odd Numbers</a>
+```python 
+n = int(input())
+
+for _ in range (n):
+    num1, num2 = map(int,input().split())
+    if num1 > num2:
+        num1, num2 = num2, num1
+    sum = 0
+    for i in range(num1+1,num2):
+        if i % 2 != 0 :
+            sum += i
+    print(sum)     
+```
+
+- #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/K">K. Divisors</a>
+
+```python
+n = int(input())
+for i in range(1,n+1):
+    if n % i == 0:
+        print(i)
+```
+- #### <a href="https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/J">J. Primes from 1 to n</a>
+
+```python
+n = int(input())
+
+for num in range(2, n+1):
+
+    isPrime = True
+
+    for i in range (2,int(num**0.5) + 1) :
+        if num % i == 0:
+            isPrime = False
+            break
+    if isPrime:
+        print( num,end=" ")
+```
