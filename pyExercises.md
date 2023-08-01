@@ -105,3 +105,41 @@ for num in range(2, n+1):
     if isPrime:
         print( num,end=" ")
 ```
+## day 2 leet code
+- #### <a href="https://leetcode.com/problems/contains-duplicate/">217. Contains Duplicate
+</a>
+
+```python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        testdub = set()
+
+        for nums in nums:
+            if nums in testdub:
+                return True
+            testdub.add(nums)
+        return False
+
+```
+- #### <a href="https://leetcode.com/problems/valid-anagram">242. Valid Anagram</a>
+
+```python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
+
+```
+
+- #### <a href = "https://leetcode.com/problems/two-sum/">1. Two Sum </a>
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        answer = {} 
+        for i in range(len(nums)):
+            x = target - nums[i]
+            if x in answer:
+                return answer[x], i
+            answer[nums[i]] = i
+
+```
