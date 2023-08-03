@@ -143,3 +143,17 @@ class Solution:
             answer[nums[i]] = i
 
 ```
+
+## day 5 leet code
+
+- #### <a href = "https://leetcode.com/problems/top-k-frequent-elements">347. Top K Frequent Elements</a>
+
+```python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        count = Counter(nums)
+        ans = count.most_common(k)
+        # print(ans)
+        result = [x[0] for x in ans]
+        return result
+```
