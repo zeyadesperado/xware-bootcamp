@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #76b852, #8DC26F);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 8px; /* Adjusted padding */
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px; /* Adjusted font size */
+            transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            padding: 6px 12px; /* Adjusted padding */
+            border-radius: 5px;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
+        .form-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'blog_home' %}">Home</a>
+            <a href="{% url 'myblogs' %}">My Blogs</a>
+            <a href="{% url 'create_blog' %}">Create Blog</a>
+        </div>
+        <div class="nav-links">
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'logout' %}">Logout</a>
+            <a href="{% url 'register' %}">Register</a>
+        </div>
+    </div>
+    <div class="form-container">
+        <h2>Create a New Blog</h2>
+        <form method="post" action="{% url 'create_blog' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- <h1>{{result}}</h1>
+            <h1>{{errors}}</h1> -->
+            <label for="blog_title">Blog Title:</label>
+            <input type="text" id="blog_title" name="blog_title" required>
+            
+            <label for="blog_text">Blog Content:</label>
+            <textarea id="blog_text" name="blog_text"  required></textarea>
+            
+            <label for="blog_image">Add Image:</label>
+            <input type="file" id="blog_image" name="blog_image" accept="image/*" >
+            
+            <button type="submit">Create Blog</button>
+        </form>
+    </div>
+</body>
+</html>

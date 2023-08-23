@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #76b852, #8DC26F);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 8px; /* Adjusted padding */
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px; /* Adjusted font size */
+            transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            padding: 6px 12px; /* Adjusted padding */
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
+        .blogs-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 15px;
+        }
+
+        .blog {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .blog:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .blog p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .blog img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .blog-content {
+            margin-top: 20px;
+        }
+
+        .blog-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .blog-actions a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .blog-actions a.edit {
+            background-color: #3498db;
+        }
+
+        .blog-actions a.edit:hover {
+            background-color: #2980b9;
+        }
+
+        .blog-actions a.delete {
+            background-color: #e74c3c;
+        }
+
+        .blog-actions a.delete:hover {
+            background-color: #c0392b;
+        }
+
+        .blog-time {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="{% url 'blog_home' %}">Home</a>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'myblogs' %}">My Blogs</a>
+            {%endif%}
+            <a href="{% url 'create_blog' %}">Create Blog</a>
+        </div>
+        <div class="nav-links">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+            {%else%}
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+            {%endif%}
+        </div>
+    </div>
+    {% for blog in blog_object %}
+    <div class="blog">
+        <h2>{{ blog.blog_title }}</h2>
+        <p>Author: {{ blog.author }}</p>
+        <p class="blog-time">Time: {{ blog.timestamp }}</p>
+        <div class="blog-content">
+            <p>{{ blog.blog_text }}</p>
+            {% if blog.blog_image %}
+            <img src="{{ blog.blog_image.url }}" alt="">
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Blog</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background: linear-gradient(to bottom, #76b852, #8DC26F);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 8px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 6px 12px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .navbar a:hover {
+            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .blogs-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 15px;
+        }
+
+        .Edit {
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .Edit label {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .Edit input[type="text"],
+        .Edit input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .sec-4 button.blue {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .sec-4 button.blue:hover {
+            background-color: #2980b9;
+        }
+
+        .sec-4 a.red {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .sec-4 a.red:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="sec-1">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'myblogs' %}">My Blogs</a>
+            <a href="{% url 'create_blog' %}">Create Blog</a>
+        </div>
+        <div class="sec-2">
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="blogs-container">
+        <div class="Edit">
+            <form method="post">
+              {% csrf_token %}
+              <h4>Author: {{ blog.author}}</h4>
+              <label for="blog_title">Blog Title</label>
+              <input type="text" name="blog_title" value="{{ blog.blog_title }}">
+              <label for="blog_text">Description</label>
+              <input type="text" name="blog_text" value="{{ blog.blog_text }}">
+              <label for="blog_image">Add Image</label>
+              <input type="file" name="blog_image">
+              <div class="sec-4">
+                  <button class="blue" type="submit">Save</button>
+              </div>
+          </form>
+        </div>
+    </div>
+</body>
+</html>
