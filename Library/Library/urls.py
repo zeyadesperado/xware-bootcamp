@@ -19,8 +19,11 @@ from django.urls import path, include
 from book.views import *
 
 urlpatterns = [
-    path('api/books/', BookList ),
-    path('api/books/<int:id>', UpdateBook ),
-    path('api/visitors',VisitorList),
-    path('api/visitors/<int:id>', UpdateVisitor)
+    path('api/books/', BookApiViews.as_view() ),
+    path('api/books/<int:id>', BookApiViews.as_view() ),
+    path('visitors/', VisitorList.as_view(), name='visitor-list'),
+    path('visitors/<int:pk>/', VisitorRetrive.as_view(), name='visitor-retrieve'),
+    path('visitors/create/', VisitorCreation.as_view(), name='visitor-create'),
+    path('visitors/update/<int:pk>/', VistorUpdate.as_view(), name='visitor-update'),
+    path('visitors/delete/<int:pk>/', VisitorDeletion.as_view(), name='visitor-delete'),
 ]
