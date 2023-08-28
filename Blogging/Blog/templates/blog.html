@@ -1,0 +1,78 @@
+<!-- post_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post List</title>
+    <style>
+        /* CSS styles for the template */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Post List</h1>
+    <form action="{% url 'Blog:post_list' %}" method="GET">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Publication Date</th>
+            <th>Author</th>
+        </tr>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post.title }}</td>
+            <td>{{ post.content }}</td>
+            <td>{{ post.pub_date }}</td>
+            <td>{{ post.author }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No posts found.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
