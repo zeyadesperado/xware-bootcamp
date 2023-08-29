@@ -15,6 +15,5 @@ class BlogViewSet(viewsets.ModelViewSet):
     ordering_fields = ['-pub_date']
     filter_backends=[DjangoFilterBackend, filters.OrderingFilter , filters.SearchFilter]
     filterset_class = PostFilter
-    seach_fields = []
-    # return render(request, 'blog/post_list.html', {posts:??})
+    search_fields = ['first_name']
 
