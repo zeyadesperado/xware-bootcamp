@@ -12,3 +12,10 @@ class VisitorPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Visitor
         fields = '__all__'
+
+
+
+class ReaderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Reader
+        fields = '__all__'

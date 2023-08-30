@@ -8,9 +8,12 @@ class Author(models.Model):
 class Book(models.Model):
     name = models.CharField(max_length=200)
     price = models.IntegerField()
-    # published_year = models.IntegerField()
+    published_year = models.IntegerField(null=True,blank=True)
     isbn = models.IntegerField()
-    Author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    # Author = models.ForeignKey(Author, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 class BookDetail(models.Model):
@@ -21,8 +24,7 @@ class BookDetail(models.Model):
 
 class Reader(models.Model):
     name = models.CharField(max_length=120)
-    Borrowed_books = models.ManyToManyField(Book)
-
+    Borrowed_books = models.ForeignKey(Book,on_delete=models.CASCADE)
 
 class Visitor(models.Model):
     fname = models.CharField(max_length=120)

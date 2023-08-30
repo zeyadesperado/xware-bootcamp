@@ -1,0 +1,14 @@
+1. create app called authentication
+    2. create model User and make it default
+    3. add the following roles
+       1. SUPERUSER
+       2. ADMIN
+       3. USER
+    4. Add JWT Authenticatoin
+2. Use POSTGRES in the project !!
+3. CreateUpdateDestroy Must be have role superuser or admin
+4. ListRetrieve anyone can see them
+5. Order the List by last created
+6. Add Users API !!
+    Super User can create
+    Update/Delete/List/Retrieve   =>  Admin Or SuperUser
